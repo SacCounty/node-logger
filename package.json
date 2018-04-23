@@ -1,0 +1,39 @@
+{
+  "name": "node-logger",
+  "version": "1.0.0",
+  "description": "Sac County log analytics formatted logger for node.",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SacCounty/node-logger.git"
+  },
+  "keywords": [
+    "Syslog",
+    "Log",
+    "logger",
+    "Sacramento",
+    "County"
+  ],
+  "author": "Guy Sperry <theguysperry@gmail.com> (http://www.saccounty.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SacCounty/node-logger/issues"
+  },
+  "homepage": "https://github.com/SacCounty/node-logger#readme",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "path": "^0.12.7",
+    "winston": "^2.4.2",
+    "winston-syslog": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-node": "^6.0.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2"
+  }
+}
