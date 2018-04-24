@@ -10,16 +10,16 @@ let formatter = function(options) {
 };
 
 module.exports = function(config) {
-    if(!config || !config.log || !config.log.transports || !config.log.levels) {
+    if(!config || !config.transports || !config.levels || !config.level) {
         throw new Error("Invalid configuration.");
     }
 
-    let logTransports = config.log.transports;
+    let logTransports = config.transports;
 
     let logOptions = {
         transports: [],
-        levels: config.log.levels,
-        level: config.log.level
+        levels: config.levels,
+        level: config.level
     };
 
     logTransports.forEach(function(t) {
@@ -41,7 +41,11 @@ module.exports = function(config) {
     });
 
     let logger = new winston.Logger(logOptions);
-    winston.addColors(config.get("log.colors"));
+
+    if(config.colors) {
+        winston.addColors(config.colors);
+    }
+
     var oldInfo = logger.info;
     logger.info = function(...args) {
         var site = stack()[1];

@@ -1,6 +1,6 @@
 {
   "name": "node-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sac County log analytics formatted logger for node.",
   "main": "logger.js",
   "scripts": {
